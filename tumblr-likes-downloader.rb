@@ -13,7 +13,7 @@ SEGMENT_SIZE = 25
 
 HISTORY_FILE = File.join(File.dirname(__FILE__), "previous.yml")
 
-# Hello, hello, hello, something something vertigo
+# Hello, hello, hello, something something vertigo. Bono, bono, bono
 previous_dled_ids = YAML.load(File.open(HISTORY_FILE)) rescue []
 
 directory = "tumblr-likes"
