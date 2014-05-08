@@ -8,12 +8,11 @@ require 'pry'
 require 'pry-nav'
 binding.pry
 
-THREADPOOL_SIZE = 1
+THREADPOOL_SIZE = 2
 SEGMENT_SIZE = 25
 
 HISTORY_FILE = File.join(File.dirname(__FILE__), "previous.yml")
 
-# Hello, hello, hello
 previous_dled_ids = YAML.load(File.open(HISTORY_FILE)) rescue []
 
 directory = "tumblr-likes"
