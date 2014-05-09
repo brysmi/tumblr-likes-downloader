@@ -6,9 +6,10 @@ require 'uri'
 
 require 'pry'
 require 'pry-nav'
-require_relative 'creds'
+
 binding.pry
 
+require_relative 'creds'
 THREADPOOL_SIZE = 2
 SEGMENT_SIZE = 25
 
