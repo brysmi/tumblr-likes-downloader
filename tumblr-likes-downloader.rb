@@ -16,6 +16,9 @@ HISTORY_FILE = File.join(File.dirname(__FILE__), "previous.yml")
 previous_dled_ids = YAML.load(File.open(HISTORY_FILE)) rescue []
 
 directory = "tumblr-likes"
+
+require_relative 'creds'
+
 likes = client.likes
 liked_count = likes["liked_count"]
 
