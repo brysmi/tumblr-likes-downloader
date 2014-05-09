@@ -6,6 +6,7 @@ require 'uri'
 
 require 'pry'
 require 'pry-nav'
+require_relative 'creds'
 binding.pry
 
 THREADPOOL_SIZE = 2
@@ -17,7 +18,13 @@ previous_dled_ids = YAML.load(File.open(HISTORY_FILE)) rescue []
 
 directory = "tumblr-likes"
 
-require_relative 'creds'
+
+client = Tumblr::Client.new({
+  :consumer_key => CONSUMER_KEY,
+  :consumer_secret => CONSUMER_SECRET,
+  :oauth_token => OAUTH_TOKEN,
+  :oauth_token_secret => OAUTH_TOKEN_SECRET
+})
 
 likes = client.likes
 liked_count = likes["liked_count"]
