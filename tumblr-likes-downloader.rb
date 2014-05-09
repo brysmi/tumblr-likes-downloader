@@ -16,12 +16,6 @@ HISTORY_FILE = File.join(File.dirname(__FILE__), "previous.yml")
 previous_dled_ids = YAML.load(File.open(HISTORY_FILE)) rescue []
 
 directory = "tumblr-likes"
-client = Tumblr::Client.new({
-  :consumer_key => 'NE65YQw3XdlnjF1DNaKjOUj37k5ZroCFs4YeJdr955y2uXXRXe',
-  :consumer_secret => 'hg8yHWoSDrG98IMR2vxIjM5ehcFCCg6lKho3ZgrixYso0rqJ4Q',
-  :oauth_token => 'TdQnLCHKjB4D7JhXJG1xCR8xkrDKiLZ1jKmmxjONTs1YZm3RF0',
-  :oauth_token_secret => 'zZ9RlYs9SYT1BbuPfAUPYPlTSb4P01BA5xmLeWpQRKpDeOn9NV'
-})
 likes = client.likes
 liked_count = likes["liked_count"]
 
