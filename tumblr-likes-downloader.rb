@@ -10,7 +10,8 @@ require 'pry-nav'
 binding.pry
 
 require_relative 'creds'
-THREADPOOL_SIZE = 2
+
+THREADPOOL_SIZE = 1
 SEGMENT_SIZE = 25
 
 HISTORY_FILE = File.join(File.dirname(__FILE__), "previous.yml")
@@ -36,9 +37,9 @@ likes = []
 
 # restrict liked count so we are only getting a small manageable amount for testing
 
-liked_count = 50
+#liked_count = 50
 
-puts "Now I like #{liked_count}"
+#puts "Now I like #{liked_count}"
 
 (0...liked_count).each do |i|
   if i==0 or i%SEGMENT_SIZE==0
